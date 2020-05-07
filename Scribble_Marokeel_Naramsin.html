@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- =================================================== -->
+	<!-- A demonstration of a Complete Web Application       -->
+	<!-- Copyright Dan Mazzola and ABOR                      -->
+	<!-- =================================================== -->
+
+	<title>Cubs Scribble Web App</title>
+	<link rel="stylesheet" href="./Scribble.css">
+</head>
+
+<body onload="initialize()"> 		<!-- NOTE event lets us run initializer! -->
+
+	<h1 id="titleId">ASU Scribble Web App</h1>
+
+	<!-- our buttons and drop-down box (select) -->
+	<div class="controlDiv">
+		<button type="button" id="red"  onclick="setColor('red' )"></button>
+		<button type="button" id="blue" onclick="setColor('blue')"></button>
+		<button type="button" id="skyblue"   onclick="setColor('skyblue'  )"></button> 
+		<button type="button" id="gradient"  onclick="setColor('gradient')"></button> 
+		<button type="button" id="clear"  onclick="clearCanvas()">Clear</button> 
+
+		<select name="lineWidth" onchange="setLineWidth(value)">
+			<option value= "1"> 1</option>
+			<option value= "3"> 3</option>
+			<option value= "5"> 5</option>
+			<option value="10">10</option>
+			<option value="15">15</option>
+			<option value="20">20</option>
+			<option value="25">25</option>
+		</select>
+	</div>
+
+	<!-- The drawing canvas and event handlers. Note we hard code the size -->
+	<div id="canvasDivId">
+		<canvas id="drawingCanvasId" width="500" height="500"
+			onmousemove  =	"mouseMoved(event)" 
+			onmouseout   =	"mouseLeftCanvas(event)"
+			onmouseenter =	"mouseEnteredCanvas(event)"
+			onmousedown  =	"startDrawing(event)"
+			onmouseup 	 =	"stopDrawing(event)">
+			Your browser does not support the Canvas tag
+		</canvas>
+	</div>
+
+	<!-- Placeholders for debugging info via javascript writing to the DOM -->
+	<div id="informationDivId">
+		<p id="coordinatesId">  </p>
+		<p id="mouseInOutId">   </p>
+		<p id="mouseUpDownId">  </p>
+		<p id="drawColorId">    </p>
+		<p id="lineWidthId">	</p>
+	</div>
+
+	<script src="./Scribble.js"></script>
+
+</body>
+</html>

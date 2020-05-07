@@ -1,0 +1,53 @@
+/**
+ * CSS for the Scribble Web App
+ * Copyright Dan Mazzola and ABOR
+ */
+
+body {
+	font-family: 		sans-serif;
+	background-color: 	peachpuff; 	
+}
+
+#drawingCanvasId {
+	border: 			2px solid #c3c3c3;
+	margin-right: 		auto;
+	margin-left: 		auto;
+	display: 			block;
+	background-color: 	white;
+}
+
+#titleId {
+	text-align: 		center;
+}
+
+#informationDivId {
+	color: 				#111111;
+	font-weight: 		bold;
+	width: 				500px;
+	margin-right: 		auto;
+	margin-left: 		auto;
+	text-align: 		center;
+}
+
+p {
+	margin: 			0px;
+}
+
+.controlDiv {
+	width: 				500px;
+	margin-right: 		auto;
+	margin-left: 		auto;
+	padding-bottom: 	10px;		
+}
+
+.controlDiv button, select {
+	width: 				95px;
+	height: 			35px;
+	font-size: 			20px;
+	vertical-align: 	middle;	
+}
+
+#red 		{ background-color: red; }
+#blue	    { background-color: blue; }
+#skyblue 	{ background-color: skyblue; }
+#gradient	{background-image: linear-gradient(to right, red, blue, skyblue);}
